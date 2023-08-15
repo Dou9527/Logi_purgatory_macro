@@ -39,7 +39,7 @@
 
 解决方案：
 
-*请使用[此版本代码](https://github.com/Afool4U/Logi_purgatory_macro/blob/main/%E6%97%A0%E6%B3%A8%E9%87%8A%E7%89%88%E6%9C%AC.lua)。*
+*请使用[此版本代码](%E6%97%A0%E6%B3%A8%E9%87%8A%E7%89%88%E6%9C%AC.lua)。*
 
 ### 讲解视频
 *点击[此处](https://b23.tv/NYTZymS)查看。*
