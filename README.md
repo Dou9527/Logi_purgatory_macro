@@ -6,6 +6,10 @@
 使用Box-Muller变换生成服从正态分布的随机数，数据真实自然更符合普通人类(~~bushi~~)
 
 ## 该代码使用GPL v3.0协议，如需商用，请务必开源并沿用该协议！！
+### 2023.8.24 
+某些无良商家，倒卖代码就算了(毕竟是开源免费的)，怎么还敢说自己是全网首发呢？
+
+<img src="https://github.com/Afool4U/Logi_purgatory_macro/assets/83582188/39ae442e-225e-4969-9701-5ecb49808cb1" width="50%">
 
 ### 游戏内设置
 
@@ -63,3 +67,9 @@
 群号：702325640
 
 群文件有视频讲解、鼠标键位大全和宏代码文件。请谨慎使用其他群员上传的文件，出现问题概不负责！！
+
+### 版本更新
+
+#### 2023.8.25
+- 使用更科学的时间作为随机数种子（利用GetDate）
+- 使用精确延时函数（感谢[@CHN-FengGe](https://github.com/CHN-FengGe)的[代码](https://github.com/CHN-FengGe/PUBG/blob/main/PUBG_FengGe_FIX_230625.lua)提供思路）
