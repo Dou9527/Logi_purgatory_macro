@@ -11,7 +11,7 @@ EnablePrimaryMouseButtonEvents(true)
 math.randomseed(GetDate("%H%M%S"):reverse())  -- 由于lua底层使用C语言的LCG随机数算法，会导致相近种子产生的结果也相近，逆序即可避免此问题
 
 -- 精准延时函数
-Delay = function(time)
+function Delay(time)
     local startTime = GetRunningTime()
     while GetRunningTime() - startTime < time do
     end
