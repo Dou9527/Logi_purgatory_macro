@@ -10,13 +10,6 @@ EnablePrimaryMouseButtonEvents(true)
 -- 初始化随机种子（注意，罗技lua不支持os.time取随机数种子，但提供了GetDate函数）
 math.randomseed(GetDate("%H%M%S"):reverse())  -- 由于lua底层使用C语言的LCG随机数算法，会导致相近种子产生的结果也相近，逆序即可避免此问题
 
--- 精准延时函数
-function Delay(time)
-    local startTime = GetRunningTime()
-    while GetRunningTime() - startTime < time do
-    end
-end
-
 -- 生成正态分布随机数的函数（使用Box-Muller变换）
 function generate_normal_random(mean, stddev)
     -- 生成两个均匀分布的随机数（0到1之间）
@@ -59,7 +52,7 @@ function OnEvent(event, arg)
             -- 按下指定按键的事件触发
             if (arg == purgatory_key) then
                 -- 随机延迟一定时间（10~25毫秒）
-                Delay(random(10, 25))
+                Sleep(random(10, 25))
                 -- 如果不是左键
                 if (arg ~= 1) then
                     -- 重复执行以下操作直到侧键释放
@@ -67,11 +60,11 @@ function OnEvent(event, arg)
                         -- 模拟按下鼠标左键
                         PressMouseButton(1)
                         -- 随机延迟一定时间（100~185毫秒）
-                        Delay(random(100, 185))
+                        Sleep(random(100, 185))
                         -- 松开鼠标左键
                         ReleaseMouseButton(1)
                         -- 随机延迟一定时间（10~25毫秒）
-                        Delay(random(10, 25))
+                        Sleep(random(10, 25))
                     until not IsMouseButtonPressed(purgatory_key)
                 -- 指定为左键触发
                 else
@@ -80,11 +73,11 @@ function OnEvent(event, arg)
                         -- 模拟按下键盘上的L键
                         PressKey("L")
                         -- 随机延迟一定时间（100~185毫秒）
-                        Delay(random(100, 185))
+                        Sleep(random(100, 185))
                         -- 松开键盘上的L键
                         ReleaseKey("L")
                         -- 随机延迟一定时间（10~25毫秒）
-                        Delay(random(10, 25))
+                        Sleep(random(10, 25))
                     until not IsMouseButtonPressed(1)
                 end
             end
