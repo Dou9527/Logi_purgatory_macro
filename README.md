@@ -73,3 +73,6 @@
 #### 2023.8.25
 - 使用更科学的时间作为随机数种子（利用GetDate）
 - 使用精确延时函数（感谢[@CHN-FengGe](https://github.com/CHN-FengGe)的[代码](https://github.com/CHN-FengGe/PUBG/blob/main/PUBG_FengGe_FIX_230625.lua)提供思路）
+
+#### 2023.8.26
+- 删除精确延时函数(电脑性能不足时会导致卡顿)
