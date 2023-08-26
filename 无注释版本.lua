@@ -3,11 +3,6 @@ purgatory_key = 4
 switch = true
 EnablePrimaryMouseButtonEvents(true)
 math.randomseed(GetDate("%H%M%S"):reverse())
-function Delay(time)
-    local startTime = GetRunningTime()
-    while GetRunningTime() - startTime < time do
-    end
-end
 function generate_normal_random(mean, stddev)
     local u1 = math.random()
     local u2 = math.random()
@@ -38,20 +33,20 @@ function OnEvent(event, arg)
             end
         elseif (switch) then
             if (arg == purgatory_key) then
-                Delay(random(10, 25))
+                Sleep(random(10, 25))
                 if (arg ~= 1) then
                     repeat
                         PressMouseButton(1)
-                        Delay(random(100, 185))
+                        Sleep(random(100, 185))
                         ReleaseMouseButton(1)
-                        Delay(random(10, 25))
+                        Sleep(random(10, 25))
                     until not IsMouseButtonPressed(purgatory_key)
                 else
                     repeat
                         PressKey("L")
-                        Delay(random(100, 185))
+                        Sleep(random(100, 185))
                         ReleaseKey("L")
-                        Delay(random(10, 25))
+                        Sleep(random(10, 25))
                     until not IsMouseButtonPressed(1)
                 end
             end
