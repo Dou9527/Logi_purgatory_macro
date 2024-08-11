@@ -1,5 +1,6 @@
 # Logi_purgatory_macro
 罗技G系列炼狱宏 
+2024.8.11新Fork-Backup
 
 ## 特色 
 
