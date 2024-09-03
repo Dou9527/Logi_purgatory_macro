@@ -1,4 +1,4 @@
-# Logi_purgatory_macro
+# Logi_purgatory_macro_2024.9.3.更新描述文本
 罗技G系列炼狱宏 
 **#****2024.8.11新Fork-Backup**
 
